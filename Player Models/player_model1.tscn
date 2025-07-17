@@ -55,4 +55,5 @@ position = Vector2(4, -10)
 scale = Vector2(1.2, 1.26)
 sprite_frames = SubResource("SpriteFrames_mkpni")
 animation = &"throw"
-frame_progress = 0.92724
+frame = 1
+frame_progress = 0.842905
