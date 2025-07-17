@@ -48,6 +48,11 @@ script = ExtResource("1_a88un")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_6w5hv")
 animation = &"throw"
+frame = 3
+frame_progress = 0.593634
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_egisg")
+
+[node name="spawn" type="Node2D" parent="."]
+position = Vector2(-14, -15)
