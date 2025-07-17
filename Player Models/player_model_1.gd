@@ -32,11 +32,11 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Throw"):
 		shoot()
-<<<<<<< HEAD
 
-=======
+
+
 	
 	# move_and_slide()
->>>>>>> 1debeff4ea8a5056bc6ca94616151071718e694b
+
 	
 	
