@@ -1,9 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-	
+@onready var rockanim = $AnimatedSprite2D
 @onready var main = get_node("spawn")
 @onready var projectile = load("res://Projectiles/rock.tscn")
 
@@ -15,6 +13,15 @@ func shoot():
 	instance.spawnRot = rotation
 	main.add_child.call_deferred(instance)
 	
+	rockanim.play("throw")
+	
+	var timer = Timer.new()
+	timer.wait_time = 5
+	timer.one_shot = true
+	timer.connect("timeout", Callable(instance, "_on_timeout"))
+	get_tree().current_scene.add_child(timer)
+	timer.start()
+	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -25,6 +32,11 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Throw"):
 		shoot()
+<<<<<<< HEAD
 
+=======
+	
+	# move_and_slide()
+>>>>>>> 1debeff4ea8a5056bc6ca94616151071718e694b
 	
 	

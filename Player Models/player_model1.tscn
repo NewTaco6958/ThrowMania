@@ -37,7 +37,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_65phb")
 }],
-"loop": true,
+"loop": false,
 "name": &"throw",
 "speed": 10.0
 }]
@@ -55,7 +55,10 @@ position = Vector2(4, -10)
 scale = Vector2(1.2, 1.26)
 sprite_frames = SubResource("SpriteFrames_mkpni")
 animation = &"throw"
+<<<<<<< HEAD
 frame_progress = 0.464427
+=======
+>>>>>>> 1debeff4ea8a5056bc6ca94616151071718e694b
 
 [node name="spawn" type="Node2D" parent="."]
 position = Vector2(-13, -28)
