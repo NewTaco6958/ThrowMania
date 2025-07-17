@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bknwlrkchw1x6"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://ci2fewipbbadt" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cogw7cyvprvat" path="res://Assets/pixil-frame-0.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dun0nkkmm7vuk" path="res://Assets/pixilart-sprite (2).png" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://c4tn867olttcb" path="res://Player Models/player_model1.tscn" id="3_h2yge"]

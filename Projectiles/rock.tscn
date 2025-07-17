@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b88xxq0xhobj6"]
+[gd_scene load_steps=4 format=3 uid="uid://cb0ofcj1ngqtr"]
 
-[ext_resource type="Script" uid="uid://bb84770amu0ug" path="res://Projectiles/rock.gd" id="1_jhddq"]
+[ext_resource type="Script" path="res://Projectiles/rock.gd" id="1_jhddq"]
 [ext_resource type="Texture2D" uid="uid://qrv2fbiedb7s" path="res://Assets/rock.png" id="1_q53hj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wecdg"]
