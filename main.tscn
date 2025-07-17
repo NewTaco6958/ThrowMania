@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cogw7cyvprvat" path="res://Assets/pixil-frame-0.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dun0nkkmm7vuk" path="res://Assets/pixilart-sprite (2).png" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://hyfvdms8avo7" path="res://Player Models/player.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://kte222c3o3mx" path="res://Player Models/player.tscn" id="4_1bvp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_0xm2m")
@@ -76,7 +76,7 @@ offset_bottom = 35.0
 grow_horizontal = 0
 text = "Settings"
 
-[node name="player" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(42, 561)
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_1bvp3")]
+position = Vector2(62, 553)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
