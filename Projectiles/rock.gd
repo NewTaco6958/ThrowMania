@@ -13,3 +13,6 @@ func _ready():
 func _physics_process(delta):
 	velocity = Vector2(0, -SPEED).rotated(dir)
 	move_and_slide()
+
+func _on_timeout():
+	queue_free()
