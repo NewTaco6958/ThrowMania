@@ -1,9 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://lgywcdaivkk4"]
+[gd_scene load_steps=4 format=3 uid="uid://bjagclygdlv7l"]
 
-[ext_resource type="Script" uid="uid://bdwio1ny3xl6v" path="res://main_menu.gd" id="1_06t4h"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
-bg_color = Color(0.383532, 0.644532, 0.722555, 1)
+[ext_resource type="Script" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://b0o47rhnl0hsf" path="res://Assets/title-background.png" id="2_7vrkn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(0.957563, 0.957444, 0.987639, 1)
@@ -17,15 +15,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_06t4h")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Title-background" type="Sprite2D" parent="."]
 texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_06t4h")
+position = Vector2(575.5, 324.5)
+scale = Vector2(5.745, 3.225)
+texture = ExtResource("2_7vrkn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
