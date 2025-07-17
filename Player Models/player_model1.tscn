@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7xj0j1u5jj74" path="res://Assets/pixilart-sprite.png" id="1_hy5gl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy5gl"]
-size = Vector2(28, 47)
+size = Vector2(21, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5sdro"]
 atlas = ExtResource("1_hy5gl")
@@ -46,7 +46,7 @@ animations = [{
 script = ExtResource("1_5sdro")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, -9.5)
+position = Vector2(3.5, -10.5)
 shape = SubResource("RectangleShape2D_hy5gl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -55,5 +55,4 @@ position = Vector2(4, -10)
 scale = Vector2(1.2, 1.26)
 sprite_frames = SubResource("SpriteFrames_mkpni")
 animation = &"throw"
-frame = 1
-frame_progress = 0.886991
+frame_progress = 0.92724
