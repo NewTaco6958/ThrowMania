@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://devj7dpriqxuf"]
 
 [ext_resource type="Script" path="res://settings.gd" id="1_x2hje"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwo76"]
-bg_color = Color(0.374139, 0.374139, 0.374139, 1)
+[ext_resource type="Texture2D" uid="uid://bdoc7nl4pdo1q" path="res://Assets/setting-background.png" id="2_nkug2"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,14 +12,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_x2hje")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jwo76")
+[node name="Setting-background" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(577.5, 321)
+scale = Vector2(5.735, 3.2)
+texture = ExtResource("2_nkug2")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
