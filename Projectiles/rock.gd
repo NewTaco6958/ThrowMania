@@ -1,17 +1,19 @@
 extends CharacterBody2D
 
-@export var SPEED = 100
+@export var gravity = 500.0
+@export var speed = 0.0
 
-var dir : float
-var spawnPos : Vector2
-var spawnRot : float
+var dir: Vector2 = Vector2.ZERO
 
 func _ready():
-	global_position = spawnPos
-	global_rotation = spawnRot
-	
+	velocity = dir * speed
+	rotation = velocity.angle()
+	$Timer.timeout.connect(_on_timeout)
+	$Timer.start()
+
 func _physics_process(delta):
-	velocity = Vector2(0, -SPEED).rotated(dir)
+	velocity.y += gravity * delta
+	rotation = velocity.angle()
 	move_and_slide()
 
 func _on_timeout():

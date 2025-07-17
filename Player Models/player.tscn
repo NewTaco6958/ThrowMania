@@ -34,7 +34,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kojul")
 }],
-"loop": true,
+"loop": false,
 "name": &"throw",
 "speed": 5.0
 }]
@@ -55,4 +55,4 @@ frame_progress = 0.593634
 shape = SubResource("RectangleShape2D_egisg")
 
 [node name="spawn" type="Node2D" parent="."]
-position = Vector2(-14, -15)
+position = Vector2(10, 50)

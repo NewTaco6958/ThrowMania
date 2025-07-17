@@ -1,42 +1,48 @@
 extends CharacterBody2D
 
-
 @onready var rockanim = $AnimatedSprite2D
-@onready var main = get_node("spawn")
 @onready var projectile = load("res://Projectiles/rock.tscn")
 
+var drag_start_position = Vector2.ZERO
+var drag_current_position = Vector2.ZERO
+var drag_force = 0.0
+var is_dragging = false
+
+var max_drag_distance = 750.0
+var max_drag_force = 750.0
+var drag_sensitivity = 4.5
+
+var throw_timer: Timer
+
+func _ready():
+	throw_timer = Timer.new()
+	throw_timer.wait_time = 0.2
+	throw_timer.one_shot = true
+	add_child(throw_timer)
+
+func _input(event):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			is_dragging = true
+			drag_start_position = get_global_mouse_position()
+		else:
+			is_dragging = false
+			if drag_force > 1.0:
+				shoot()
+
+func _physics_process(delta: float):
+	if is_dragging:
+		drag_current_position = get_global_mouse_position()
+		var drag_distance = drag_start_position.distance_to(drag_current_position)
+		drag_force = min(drag_distance * drag_sensitivity, max_drag_force)
 
 func shoot():
 	var instance = projectile.instantiate()
-	instance.dir = rotation
-	instance.spawnPos = global_position
-	instance.spawnRot = rotation
-	main.add_child.call_deferred(instance)
-	
+	var throw_direction = (drag_current_position - drag_start_position).normalized()
+	instance.dir = throw_direction
+	instance.speed = drag_force
+	instance.global_position = global_position
+	instance.rotation = throw_direction.angle()
+	get_parent().add_child(instance)
 	rockanim.play("throw")
-	
-	var timer = Timer.new()
-	timer.wait_time = 5
-	timer.one_shot = true
-	timer.connect("timeout", Callable(instance, "_on_timeout"))
-	get_tree().current_scene.add_child(timer)
-	timer.start()
-	
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-		
-		move_and_slide()
-	
-	if Input.is_action_just_pressed("Throw"):
-		shoot()
-
-
-
-	
-	# move_and_slide()
-
-	
-	
+	drag_force = 0.0
