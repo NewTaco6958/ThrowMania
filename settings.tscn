@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://devj7dpriqxuf"]
 
-[ext_resource type="Script" path="res://settings.gd" id="1_x2hje"]
+[ext_resource type="Script" uid="uid://boyasbdes7unw" path="res://settings.gd" id="1_x2hje"]
 [ext_resource type="Texture2D" uid="uid://bdoc7nl4pdo1q" path="res://Assets/setting-background.png" id="2_nkug2"]
 
 [node name="Control" type="Control"]
